@@ -1,0 +1,748 @@
+/* General Body and Layout Styles */
+body {
+    background-color: transparent; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: default; 
+    overflow-x: hidden;
+    color: #0000003a; 
+}
+
+/* Video Background Styling */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1; /* Ensures video stays behind all content */
+    object-fit: cover; /* Ensures video covers the entire background without distortion */
+}
+
+/* Navbar Styling */
+nav {
+    background: transparent;
+    color: hwb(0 23% 4% / 0.267);
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the items vertically */
+    padding: 0.5rem 2rem; /* Small padding for the header */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.toolbar a {
+    text-decoration: none;
+}
+
+.toolbar a:hover .material-symbols-outlined {
+    color: #ef3a3a; /* Change to the hover color of your choice */
+}
+
+
+
+/* Material Symbol Icon Styling */
+.material-symbols-outlined {
+    font-size: 100rem; /* Adjust size as necessary */
+    color: #fbf9f9; /* Set the color to black or any color you prefer */
+    display: inline-block; /* Ensures the icon displays properly */
+    cursor: pointer; /* Makes the icon clickable if intended */
+    margin-left: auto; /* Align the icon to the right */
+}
+
+/* Navbar container (for centering everything) */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Centers the logo and nav links vertically */
+    width: 100%; /* Make sure nav container spans full width */
+    max-width: 1200px; /* Optional max-width for large screens */
+    margin-right: 100px; /* Center the container horizontally */
+    position: relative;
+    padding: 10px 20px;
+}
+
+
+/* Logo Styles */
+nav .logo img {
+    height: 170px; /* Adjusted height for the logo */
+    width: auto;
+    display: inline;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-family: "Roboto Mono", sans-serif;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Background color for nav links only */
+    padding: 0.5rem 1rem; /* Padding for nav links */
+    border-radius: 15px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.nav-links li a {
+    font-size: 150%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 9px;
+    transition: transform 0.9s ease;
+    text-align: center;
+}
+
+/* Nav Links Item Style */
+.nav-links li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust font size and spacing of links */
+.nav-links li a {
+    font-size: xx-small;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 9px 15px; /* Adjust padding for better spacing */
+    transition: transform 0.9s ease;
+    text-align: center;
+}
+
+/* Navbar list items */
+nav ul li {
+    display: inline;
+   
+}
+
+nav ul li a {
+    font-family: "Noto Sans", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-small; /* Adjusted font size */
+    padding: 5px 5px; /* Smaller padding */
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    color: #000000;
+    transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+nav ul li a:hover {
+    color: rgb(230, 37, 20);
+}
+
+
+/* sidebar function */
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1px; /* Small padding for the hero section */
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-top: 30%;
+    
+}
+
+.hero h6 {
+    font-size: 0.5rem;
+    margin-top: 3%;
+}
+
+.hero a {
+    font-size: 5rem;
+    margin-top: 3%;
+}
+/* Hero Content Styling */
+.hero-content {
+    padding: 100px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers content horizontally */
+    margin-left: 100px;
+}
+
+/* Explore Products Link Styling */
+.hero-content a {
+    padding: 10px 30px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-right: center;
+}
+
+.hero-content a {
+    margin-bottom: 150px;
+}
+
+
+.hero-content a:hover {
+    background-color: #e73713cd;
+}
+
+/* Circle Cursor */
+.custom-cursor {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ff5c5c; /* Red-orange border */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: transform 0.1s ease-in-out;
+    mix-blend-mode: difference;
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.container {
+    width: 100%; /* Ensure full width */
+    overflow: visible; /* Allow content to extend beyond boundaries */
+    padding: 0; /* Reset padding */
+    margin: 0 auto; /* Center align */
+    max-width: 100vw; /* Ensure container doesn't limit the viewport */
+}
+
+
+/* Who We Are Section */
+.who-we-are {
+    padding: 0;
+    margin-top: 0;
+    background-color: #042f47; /* Light background */
+    color: #ffffff;
+    text-align: center;
+    margin-top: 50px;
+    overflow: visible; /* Allow content to overflow if needed */
+    position: relative; /* Keep elements within the section positioned relatively */
+    width: 100%; /* Ensure it spans the full width */
+    height: auto;
+}
+
+.who-we-are-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.who-we-are h4 {
+    font-size: 1rem;
+    margin-top: auto;
+    color: #c82e2e;
+    padding-top: 40px;
+}
+
+.who-we-are p {
+    font-size: 1.2rem;
+    color: #f1e2e2;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.who-we-are .btn-explore {
+    padding: 12px 30px;
+    background-color: #000000;
+    color: #f8efef;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.who-we-are .btn-explore:hover {
+    background-color: #e73713cd;
+}
+
+/* Drones Section */
+.drones-section {
+    padding: 50px;
+    background-color: #042f47;
+    color: #ffffff;
+    text-align: center;
+}
+
+.drones-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.drones-section h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #c82e2e;
+}
+
+.drones-section p {
+    font-size: 1.2rem;
+    color: #f1e2e2;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Flex container for drones gallery */
+.drones-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures wrapping on small screens */
+}
+
+/* Container to hold both left and right items */
+.drone-item-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Left side image and text */
+.drone-item-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align left */
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.drone-item-left img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Right side image and text */
+.drone-item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align left */
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.drone-item-right img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.drone-description {
+    text-align: left;
+    color: white;
+}
+
+.drone-description h3 {
+    font-size: 1rem;
+    color: #fbf3f3;
+    margin-bottom: 8px;
+}
+
+.drone-description p {
+    font-size: 1rem;
+    color: #e43c3c;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .drones-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drone-item-left,
+    .drone-item-right {
+        width: 100%;
+    }
+
+    .drone-item-left img,
+    .drone-item-right img {
+        width: 80%;
+    }
+}
+
+
+/* video section */
+
+/* Ensuring the video takes the full width of the screen and is centered */
+.video-section {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;  /* Ensure no content overflows outside the section */
+    background-color: #919191;
+    width: 100%;
+}
+
+.full-width-video {
+    width: 100%;   /* 100% of the parent container width */
+    height: auto;  /* Automatically adjust the height while keeping aspect ratio */
+    object-fit: cover; /* Ensures the video covers the entire area */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the video horizontally */
+}
+
+.video-content {
+    position: relative;
+    z-index: 1;  /* Ensures content appears above the video */
+    color: rgb(22, 22, 22);
+    padding: 20px;
+}
+
+.video-content h4,
+.video-content p {
+    margin: 0;
+}
+
+.video-content h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.video-content p {
+    font-size: 0.75rem;
+}
+
+.btn-explore {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff7043;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.btn-explore:hover {
+    background-color: #08a46d;
+}
+
+
+
+/* Footer Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #1a2e5a;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #191717;
+  text-decoration: none;
+  font-weight: 300;
+  color: #100f0f;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: var(--background-color);
+  transition: all 0.6s ease-out;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #ffffff;
+  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1.5s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  
+
+
+/* Circle Cursor */
+.custom-cursor {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ff5c5c; /* Red-orange border */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: transform 0.1s ease-in-out;
+    mix-blend-mode: difference;
+    z-index: 9999;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero a {
+        font-size: 0.9rem;
+    }
+}
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav {
+        padding: 0.5rem 1rem; /* Reduce padding for smaller screens */
+        flex-direction: column; /* Stack the navbar vertically */
+    }
+    .nav-container {
+        margin-right: 0; /* Remove right margin */
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+    }
+    .material-symbols-outlined {
+        font-size: 10rem; /* Reduce icon size */
+    }
+    nav .logo img {
+        height: 100px; /* Reduce logo size */
+    }
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    .nav-links li a {
+        font-size: 1rem; /* Adjust link font size */
+        padding: 8px 15px;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 1rem;
+        margin-top: 50px; /* Adjust margin */
+    }
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust hero title font size */
+        margin-top: 20%; /* Adjust margin-top */
+    }
+    .hero h6 {
+        font-size: 1rem; /* Adjust hero subtitle */
+        margin-top: 1rem;
+    }
+    .hero a {
+        font-size: 1rem; /* Adjust link font size */
+        padding: 10px 20px;
+    }
+
+    /* Who We Are Section */
+    .who-we-are-content {
+        padding: 1rem; /* Add padding for content */
+    }
+    .who-we-are h4 {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+    .who-we-are p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+    .who-we-are .btn-explore {
+        font-size: 0.9rem; /* Adjust button size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    /* Drones Section */
+    .drones-gallery {
+        flex-direction: column; /* Stack gallery items vertically */
+        gap: 1rem;
+        align-items: center;
+    }
+    .drone-item-left img,
+    .drone-item-right img {
+        width: 100%; /* Adjust image width */
+    }
+
+    /* Video Section */
+    .video-content h4 {
+        font-size: 1.2rem; /* Adjust video section heading */
+    }
+    .video-content p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+    .btn-explore {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+    /* Footer */
+    .footer-col {
+        width: 100%; /* Stack footer columns */
+        margin-bottom: 20px;
+    }
+    .footer-col h4 {
+        font-size: 1.2rem; /* Adjust footer heading */
+    }
+    .footer-col ul li a {
+        font-size: 0.9rem; /* Adjust link font size */
+    }
+}
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+
+    /* Navbar */
+    .nav-links li a {
+        font-size: 0.8rem;
+        padding: 6px 10px; /* Adjust padding for nav links */
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust hero title */
+    }
+    .hero a {
+        font-size: 1.5rem; /* Adjust button font size */
+    }
+
+    /* Drones Section */
+    .drone-item-left img,
+    .drone-item-right img {
+        width: 80%; /* Reduce image size */
+    }
+
+    /* Video Section */
+    .btn-explore {
+        font-size: 0.8rem; /* Adjust button size */
+        padding: 8px 15px; /* Adjust padding */
+    }
+}

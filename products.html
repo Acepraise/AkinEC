@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Our Products - AKINTOLA ENGINEERING</title>
+  <meta name="description" content="Explore AKINTOLA ENGINEERING's high-tech unmanned aerial systems, satellite solutions, and digital innovations.">
+  <meta name="keywords" content="AKINTOLA, drones, satellites, digital solutions, engineering">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="images/dr4.png" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+<!-- Inline CSS for Circle Cursor -->
+<style>
+  /* Circle Cursor */
+.custom-cursor {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #ff5c5c; /* Red-orange border */
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transition: transform 0.1s ease-in-out;
+  mix-blend-mode: difference;
+  z-index: 9999; /* Ensure it's on top of other content */
+}
+</style>
+
+</head>
+
+<body class="products-page">
+
+  <div class="custom-cursor"></div>
+
+  <script>
+    // Circle Cursor Implementation
+const cursor = document.querySelector('.custom-cursor');
+
+// Circle Cursor with Dragging Effect
+let mouseX = 0;
+let mouseY = 0;
+let cursorX = 0;
+let cursorY = 0;
+const speed = 0.1; // Adjust this for faster/slower dragging
+
+// Track mouse movement
+document.addEventListener('mousemove', (e) => {
+mouseX = e.clientX;
+mouseY = e.clientY;
+});
+
+// Function to animate cursor movement
+function animateCursor() {
+// Calculate distance between current cursor position and mouse position
+const distanceX = mouseX - cursorX;
+const distanceY = mouseY - cursorY;
+
+// Gradually move cursor toward the mouse position
+cursorX += distanceX * speed;
+cursorY += distanceY * speed;
+
+// Update cursor position
+cursor.style.left = `${cursorX}px`;
+cursor.style.top = `${cursorY}px`;
+
+// Continuously update animation
+requestAnimationFrame(animateCursor);
+}
+
+// Start the cursor animation
+animateCursor();
+
+// Scale the cursor when hovering over buttons or links
+const hoverElements = document.querySelectorAll('a, .btn-primary, .btn-secondary');
+
+hoverElements.forEach(el => {
+el.addEventListener('mouseenter', () => {
+    cursor.style.transform = 'scale(0.5)'; // Shrink cursor when hovering
+});
+
+el.addEventListener('mouseleave', () => {
+    cursor.style.transform = 'scale(1)'; // Return cursor to normal size
+});
+});
+
+  </script>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="images/IMG-20241108-WA0061-removebg-preview.png" alt="AKINTOLA ENGINEERING Logo" style="max-height: 250px;">
+      </a>
+      
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container">
+        <h1>Our Products</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Our Products</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+   <!-- Products Section -->
+<section id="products" class="products section" style="padding: 60px 0; background-color: #f8f9fa;">
+  <div class="container" style="max-width: 1140px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4" style="display: flex; flex-wrap: wrap; gap: 30px;">
+
+      <div class="col-lg-6" style="flex: 1 1 45%; max-width: 45%;">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200" style="text-align: center; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="images/dr2.png" alt="Drone 1" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px;">Advanced Drone Systems</h3>
+          <p style="font-size: 16px; color: #555;">Our high-tech drones are engineered for precision and performance, perfect for a variety of industrial and commercial uses.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" style="flex: 1 1 45%; max-width: 45%;">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300" style="text-align: center; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="images/dr3.png" alt="Satellite System" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px;">Unmanned Manned Machine</h3>
+          <p style="font-size: 16px; color: #555;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorem quod eveniet qui laboriosam est impedit corporis beatae. Et similique omnis laborum labore aliquam, autem quas repellendus voluptates delectus</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" style="flex: 1 1 45%; max-width: 45%;">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="400" style="text-align: center; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="images/dr5.png" alt="Digital Solutions" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px;">Aerial machines</h3>
+          <p style="font-size: 16px; color: #555;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati aliquid minus voluptas nisi impedit natus quaerat nemo explicabo, sequi ratione rem inventore dolor facere aut omnis error, unde odio</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" style="flex: 1 1 45%; max-width: 45%;">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="500" style="text-align: center; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="images/dr6.png" alt="Drone 2" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px;">Industrial Drone Systems</h3>
+          <p style="font-size: 16px; color: #555;">Designed for industrial applications, our drones are built to withstand harsh environments and deliver superior results.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- /Products Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="images/IMG-20241108-WA0061-removebg-preview.png" alt="AKINTOLA ENGINEERING Logo" style="max-height: 250px; margin-left: 200px;">
+          </a>
+          
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@akintolaeng.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="products.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="products.html">Unmanned Manned Machine</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter for the latest updates on our products and solutions.</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">AKINTOLA ENGINEERING COMPANY</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://bit.ly/Odetayo">ACE</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
