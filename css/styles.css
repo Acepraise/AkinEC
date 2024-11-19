@@ -1,3 +1,108 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Header and Navbar */
+  header {
+    position: relative;
+    width: 100%;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .material-symbols-outlined {
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+  
+    .material-symbols-outlined {
+      font-size: 2rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-section p {
+      font-size: 1.2rem;
+    }
+  }
+  
+
 /* General Body and Layout Styles */
 body {
     background-color: transparent; 
@@ -5,7 +110,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 100%;
+    width: auto;
     cursor: default; 
     overflow-x: hidden;
     color: #0000003a; 
@@ -22,22 +127,22 @@ body {
     object-fit: cover; /* Ensures video covers the entire background without distortion */
 }
 
-/* Navbar Styling */
+
 nav {
-    background: transparent;
-    color: hwb(0 23% 4% / 0.267);
-    display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the items vertically */
-    padding: 0.5rem 2rem; /* Small padding for the header */
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
-    z-index: 9999;
-}
+    z-index: 10;
+    background-color: transparent;
+  }
 
 .toolbar a {
     text-decoration: none;
+}
+
+.toolbar {
+    margin-right: 200px;
 }
 
 .toolbar a:hover .material-symbols-outlined {
@@ -48,49 +153,61 @@ nav {
 
 /* Material Symbol Icon Styling */
 .material-symbols-outlined {
-    font-size: 100rem; /* Adjust size as necessary */
-    color: #fbf9f9; /* Set the color to black or any color you prefer */
-    display: inline-block; /* Ensures the icon displays properly */
-    cursor: pointer; /* Makes the icon clickable if intended */
-    margin-left: auto; /* Align the icon to the right */
-}
+    font-size: 2.5rem; /* Adjusted size for better balance */
+    color: white;
+    margin-right: 20px; /* Centered the icon relative to the navbar */
+  }
 
 /* Navbar container (for centering everything) */
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Centers the logo and nav links vertically */
-    width: 100%; /* Make sure nav container spans full width */
-    max-width: 1200px; /* Optional max-width for large screens */
-    margin-right: 100px; /* Center the container horizontally */
-    position: relative;
-    padding: 10px 20px;
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding for consistent alignment */
+  }
 
 
 /* Logo Styles */
 nav .logo img {
     height: 170px; /* Adjusted height for the logo */
-    width: auto;
+    width: 250px;
     display: inline;
+    padding-left: 80px;
 }
 
 /* Navigation Links */
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 2rem;
-    font-family: "Roboto Mono", sans-serif;
-    color: #fff;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.5); /* Background color for nav links only */
-    padding: 0.5rem 1rem; /* Padding for nav links */
-    border-radius: 15px;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-}
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    padding: 10px 15px;
+    border-radius: 8px; /* Rounded edges */
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .nav-links a:hover {
+    color: #555; /* Subtle hover effect */
+  }
+  
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%; /* Ensure the links align neatly */
+      padding: 10px;
+    }
+  }
 
 .nav-links li a {
     font-size: 150%;
@@ -99,7 +216,7 @@ nav .logo img {
     font-weight: 600;
     padding: 9px;
     transition: transform 0.9s ease;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Nav Links Item Style */
@@ -111,18 +228,19 @@ nav .logo img {
 
 /* Adjust font size and spacing of links */
 .nav-links li a {
-    font-size: xx-small;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    padding: 9px 15px; /* Adjust padding for better spacing */
+    padding: 3px 9px; /* Adjust padding for better spacing */
+    padding-right: 50px;
     transition: transform 0.9s ease;
     text-align: center;
 }
 
 /* Navbar list items */
 nav ul li {
-    display: inline;
+    display: inline-flex;
    
 }
 
@@ -184,7 +302,6 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center; /* Centers content horizontally */
-    margin-left: 100px;
 }
 
 /* Explore Products Link Styling */
@@ -194,16 +311,16 @@ nav ul li a:hover {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 20px;
     transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-right: center;
-}
-
-.hero-content a {
+    display: inline;
     margin-bottom: 150px;
 }
+
+/* .hero-content a {
+    margin-bottom: 150px;
+} */
 
 
 .hero-content a:hover {
@@ -388,66 +505,6 @@ nav ul li a:hover {
 }
 
 
-/* video section */
-
-/* Ensuring the video takes the full width of the screen and is centered */
-.video-section {
-    position: relative;
-    text-align: center;
-    padding: 0;
-    overflow: hidden;  /* Ensure no content overflows outside the section */
-    background-color: #919191;
-    width: 100%;
-}
-
-.full-width-video {
-    width: 100%;   /* 100% of the parent container width */
-    height: auto;  /* Automatically adjust the height while keeping aspect ratio */
-    object-fit: cover; /* Ensures the video covers the entire area */
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Centers the video horizontally */
-}
-
-.video-content {
-    position: relative;
-    z-index: 1;  /* Ensures content appears above the video */
-    color: rgb(22, 22, 22);
-    padding: 20px;
-}
-
-.video-content h4,
-.video-content p {
-    margin: 0;
-}
-
-.video-content h4 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.video-content p {
-    font-size: 0.75rem;
-}
-
-.btn-explore {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #ff7043;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.btn-explore:hover {
-    background-color: #08a46d;
-}
-
-
-
 /* Footer Styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -472,7 +529,7 @@ ul{
   list-style: none;
 }
 .footer{
-  background-color: #1a2e5a;
+  background-color: #e9ecf2;
     padding: 70px 0;
 }
 .footer-col{
@@ -481,7 +538,7 @@ ul{
 }
 .footer-col h4{
   font-size: 18px;
-  color: #ffffff;
+  color: #010101;
   text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
@@ -500,6 +557,12 @@ ul{
 .footer-col ul li:not(:last-child){
   margin-bottom: 10px;
 }
+
+.footer-col ul p {
+    font-size: 15px;
+  }
+
+
 .footer-col ul li a{
   font-size: 16px;
   text-transform: capitalize;
@@ -511,7 +574,7 @@ ul{
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-  color: #ffffff;
+  color: #064175;
   padding-left: 8px;
 }
 .footer-col .social-links a{
@@ -523,12 +586,12 @@ ul{
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #ffffff;
+  color: #bd5252;
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
   color: #24262b;
-  background-color: #ffffff;
+  background-color: #0b62c6;
 }
 
 /*responsive*/
